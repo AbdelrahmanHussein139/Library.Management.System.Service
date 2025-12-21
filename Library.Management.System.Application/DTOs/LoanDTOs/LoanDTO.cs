@@ -1,0 +1,14 @@
+﻿
+
+namespace Library.Management.System.Application.DTOs.LoanDTOs;
+
+public class LoanDTO
+{
+    public Guid Id { get; set; } = Guid.Empty;
+    public DateTime LoanDate { get; set; } = DateTime.UtcNow;
+    public DateTime? ReturnDate { get; set; }
+    public Guid BookId { get; set; } = Guid.Empty;
+    public Guid BorrowerId { get; set; } = Guid.Empty;
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+}

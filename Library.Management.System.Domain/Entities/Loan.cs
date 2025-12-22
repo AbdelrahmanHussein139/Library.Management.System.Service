@@ -11,21 +11,5 @@ public class Loan:BaseEntity
     public Guid BorrowerId { get; private set; }=Guid.Empty;
     public Borrower? Borrower { get; private set; }
 
-    public void LoanBook(Guid bookId, Guid borrowerId)
-    {
-        BookId = bookId;
-        BorrowerId = borrowerId;
-        LoanDate = DateTime.UtcNow;
-        ReturnDate = null;
-    }
-
-    public void ReturnBook()
-    {
-        if (!IsActive)
-            throw new DomainException("Book already returned");
-
-        ReturnDate = DateTime.UtcNow;
-    }
-
-    public bool IsActive => ReturnDate == null;
+    
 }

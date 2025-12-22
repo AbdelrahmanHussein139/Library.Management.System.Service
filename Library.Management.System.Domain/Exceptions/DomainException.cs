@@ -8,6 +8,9 @@ namespace Library.Management.System.Domain.Exceptions
     {
         public DomainException(string message):base(message)
         {
+
+
+
         }
     }
 }
